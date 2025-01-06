@@ -91,7 +91,7 @@
     padding: 4px 8px;
     color: var(--text-color);
     background-color: var(--background-color);
-    border-radius: 100%;
+    border-radius: 30px;
   }
 }
 .header__body-button {
