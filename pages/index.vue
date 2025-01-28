@@ -1,11 +1,6 @@
 <template>
-  <div class="page-block">
-    <div class="tabs">
-      <div class="tab tab-active">Текущий заём</div>
-      <div class="tab">Заявки</div>
-      <div class="tab">Файлы</div>
-      <div class="tab">Документы</div>
-    </div>
+  <div class="page-block main-page">
+    <MainTabs />
     <div class="name">Иванов Иван Иванович</div>
     <div class="card-block">
       <div class="card-block__card"></div>
@@ -21,54 +16,11 @@
       <span>020764954</span>
     </div>
     <button class="button">Добавить карту</button>
-    <div class="main-text mw-200">Где безопасно скачать приложение Boostra</div>
-    <div class="main-apps-links">
-      <a href="" target="_blank">
-        <img src="~/assets/images/rustore.svg">
-        <span>RuStore</span>
-      </a>
-      <a href="" target="_blank">
-        <img src="~/assets/images/nashstore.svg">
-        <span>NashStore</span>
-      </a>
-      <a href="" target="_blank">
-        <img src="~/assets/images/android.svg">
-        <span>Android</span>
-      </a>
-    </div>
+    <LinksApps />
   </div>
 </template>
 
 <style lang="scss">
-.tabs {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-
-  @media (max-width: 1000px) {
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-}
-.tab {
-  padding: 8px 24px;
-  font-size: 12px;
-  line-height: 24px;
-  cursor: pointer;
-  user-select: none;
-  border: 1px solid rgba(229, 233, 237, 1);
-  border-radius: 200px;
-  color: var(--text-gray-color);
-
-  &.tab-active {
-    border: 2px solid var(--blue-color);
-    color: var(--text-color);
-  }
-
-  @media (max-width: 1000px) {
-    padding: 8px 24px;
-  }
-}
 .name {
   font-family: Inter;
   font-size: 32px;
@@ -136,18 +88,6 @@
     font-size: 34px;
   }
 }
-.main-text {
-  font-family: Inter;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-
-  @media (max-width: 1000px) {
-    &.mw-200 {
-      width: 200px;
-    }
-  }
-}
 .main-text__green {
   font-family: Inter;
   font-size: 14px;
@@ -161,53 +101,14 @@
     font-weight: 700;
   }
 }
-.button {
-  padding: 12px 39px;
-  border-radius: 200px;
-  background: rgba(240, 248, 255, 1);
-  cursor: pointer;
-  border: none;
-  outline: none;
-  user-select: none;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 24px;
-  text-align: center;
-  color: var(--blue-color);
-  margin-top: 24px;
-  margin-bottom: 44px;
+.main-page {
+  & .button {
+    margin-top: 24px;
+    margin-bottom: 44px;
 
-  @media (max-width: 1000px) {
-    margin-top: 20px;
-  }
-}
-.main-apps-links {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  margin-top: 16px;
-
-  & > a {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 82px;
-    height: 82px;
-    background-color: var(--text-color);
-    color: var(--white-color);
-    border-radius: 12px;
-    font-size: 12px;
-    line-height: 24px;
-    user-select: none;
-    padding-top: 15px;
-    padding-bottom: 5px;
-  }
-
-  @media (max-width: 500px) {
-    justify-content: space-between;
-    gap: 10px;
+    @media (max-width: 1000px) {
+      margin-top: 20px;
+    }
   }
 }
 </style>
