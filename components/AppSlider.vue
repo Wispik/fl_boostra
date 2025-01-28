@@ -118,6 +118,15 @@ input[type="range"] {
     margin-top: -14px;
   }
 
+  &::-moz-range-thumb {
+    width: 31px;
+    height: 31px;
+    background-color: #fff;
+    border: 7px solid var(--blue-color);
+    border-radius: 100%;
+    margin-top: -14px;
+  }
+
   &::-webkit-slider-runnable-track {
     appearance: none;
     height: 7px;
